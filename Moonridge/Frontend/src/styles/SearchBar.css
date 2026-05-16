@@ -1,0 +1,124 @@
+/* ===== SEARCH BAR (PRODUCTION LEVEL) ===== */
+.search-bar {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-end;
+  gap: 18px;
+  background: #ffffff;
+  padding: 20px 26px;
+  border-radius: 16px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
+  flex-wrap: wrap;
+  border: 1px solid #f0f0f0;
+}
+
+/* ===== INPUT ITEMS ===== */
+.search-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+  min-width: 160px;
+}
+
+/* Labels */
+.search-item label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #666;
+  letter-spacing: 0.4px;
+}
+
+/* ===== INPUT FIELDS ===== */
+.search-item input,
+.search-item select {
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid #e0e0e0;
+  outline: none;
+  width: 100%;
+  font-size: 14px;
+  background: #fafafa;
+  transition: all 0.25s ease;
+}
+
+/* Placeholder styling */
+.search-item input::placeholder {
+  color: #aaa;
+}
+
+/* Focus state (premium subtle glow) */
+.search-item input:focus,
+.search-item select:focus {
+  background: #fff;
+  border-color: #1abc9c;
+  box-shadow: 0 0 0 3px rgba(26, 188, 156, 0.12);
+}
+
+/* ===== GUESTS FLEX ===== */
+.guests-select {
+  display: flex;
+  gap: 8px;
+}
+
+/* ===== SEARCH BUTTON ===== */
+.search-btn {
+  background: linear-gradient(135deg, #d4af37, #b8962e);
+  color: #0f0f0f;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 13px 26px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  white-space: nowrap;
+  box-shadow: 0 6px 18px rgba(26, 188, 156, 0.25);
+}
+
+/* Hover effect */
+.search-btn:hover {
+  background: linear-gradient(135deg, #b8962e, #a3831f);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgba(26, 188, 156, 0.3);
+}
+
+/* Active click */
+.search-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 10px rgba(26, 188, 156, 0.2);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .search-bar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 14px;
+  }
+
+  .search-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .search-bar {
+    padding: 16px;
+    gap: 10px;
+  }
+
+  .search-item input,
+  .search-item select {
+    font-size: 13px;
+    padding: 10px;
+  }
+
+  .search-btn {
+    font-size: 13px;
+    padding: 11px;
+  }
+}
